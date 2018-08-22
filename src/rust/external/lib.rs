@@ -17,3 +17,7 @@ mod external;
 
 pub use crypto_rand::*;
 pub use external::*;
+
+#[global_allocator]
+#[cfg(test)]
+static ALLOCATOR: std::alloc::System = std::alloc::System;

@@ -10,4 +10,4 @@
 # `-nodefaultlibs`, so make sure to filter that out here.
 
 linker_args="$@"
-$CCLD -fsanitize=address -fsanitize=undefined ${linker_args//-nodefaultlibs/}
+$CCLD @RUST_LINKER_OPTIONS@ ${linker_args//-nodefaultlibs/}

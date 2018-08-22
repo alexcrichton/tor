@@ -1181,10 +1181,10 @@ if test "x$have_clang" = "xyes"; then
 	fi
 else
 	if test "x$CFLAGS_ASAN" != "x"; then
-		RUST_LINKER_OPTIONS="$RUST_LINKER_OPTIONS -lasan"
+		RUST_LINKER_OPTIONS="$RUST_LINKER_OPTIONS -fsanitize=address"
 	fi
 	if test "x$CFLAGS_UBSAN" != "x"; then
-        	RUST_LINKER_OPTIONS="$RUST_LINKER_OPTIONS -lubsan"
+        	RUST_LINKER_OPTIONS="$RUST_LINKER_OPTIONS -fsanitize=undefined"
 	fi
 fi
 AC_SUBST(RUST_LINKER_OPTIONS)

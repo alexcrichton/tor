@@ -6,3 +6,7 @@ extern crate libc;
 mod smartlist;
 
 pub use smartlist::*;
+
+#[cfg(test)]
+#[global_allocator]
+static ALLOCATOR: std::alloc::System = std::alloc::System;

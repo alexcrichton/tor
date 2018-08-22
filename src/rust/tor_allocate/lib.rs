@@ -13,3 +13,6 @@ extern crate libc;
 
 mod tor_allocate;
 pub use tor_allocate::*;
+
+#[global_allocator]
+static ALLOCATOR: std::alloc::System = std::alloc::System;

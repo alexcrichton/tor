@@ -11,7 +11,7 @@ for cargo_toml_dir in "${abs_top_srcdir:-../../..}"/src/rust/*; do
 	    CARGO_TARGET_DIR="${abs_top_builddir:-../../..}/src/rust/target" \
 	    "${CARGO:-cargo}" test ${CARGO_ONLINE-"--frozen"} \
 	    ${EXTRA_CARGO_OPTIONS} \
-	    --manifest-path "${cargo_toml_dir}/Cargo.toml" || exitcode=1
+	    --manifest-path "${cargo_toml_dir}/Cargo.toml" -v || exitcode=1
     fi
 done
 

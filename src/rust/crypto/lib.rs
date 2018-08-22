@@ -31,6 +31,7 @@
 extern crate digest;
 extern crate libc;
 extern crate rand_core;
+extern crate tor_allocate;
 
 // External dependencies for tests.
 #[cfg(test)]
